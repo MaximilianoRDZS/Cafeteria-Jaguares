@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="bg-gray-100">
+  <!-- Head -->
   <div class="bg-white flex p-6 shadow-sm">
     <div class="mb-3 w-100 ">
       <img src="{{asset('img/Jaguares.png')}}" class="w-20" alt="image">
@@ -50,6 +51,7 @@
         </li>
       </ul>
     </div>
+
     <!-- Contenido -->
     <div class="container w-full">
     <div class="flex flex-col">
