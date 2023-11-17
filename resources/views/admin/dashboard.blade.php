@@ -21,7 +21,7 @@
           <div class="bg-white shadow-sm p-2 mr-3 rounded-lg">
             <i class="fa-solid fa-house fa-lg"></i>
           </div>
-          <a href="" class="self-center">Dashboard</a>
+          <a href="{{route('dashboard')}}" class="self-center">Dashboard</a>
         </li>
         <li class="flex mb-8">
           <div class="bg-white shadow-sm p-2 mr-3 rounded-lg">

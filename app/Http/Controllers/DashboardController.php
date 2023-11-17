@@ -1,16 +1,22 @@
 <?php
 
-namespace App\Http\Controller;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller {
+class DashboardController extends Controller
+{
+    // Constructor para verificar autenticación
+    public function __construct()
+    {
+        $this->middleware(['auth']);
+    }
 
-  //Para ir al login
-  public function index()
-  {
-    #Vista de login de usuarios
-    
-  }
-
+    // Función para mostrar la vista del dashboard
+    public function index(){
+        if(auth()->user()->rol == '1'){
+            return view('admin.dashboard');
+        }
+        return view('auth.login');
+    }
 }

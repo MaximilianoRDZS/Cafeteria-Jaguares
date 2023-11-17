@@ -21,15 +21,25 @@
           <div class="mb-4 mt-2">
             <h2 class="font-bold text-3xl">Bienvenido</h2>
           </div>
-          <div class=" mb-3">
-            <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Usuario">
-          </div>
-          <div class=" mb-1">
-            <input type="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Contraseña">
-          </div>
-          <div class="w-100 mb-3 py-4">
-            <button class="w-full text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Aceptar</button>
-          </div>
+
+          <form action="{{route('login')}}" method="POST" novalidate>
+            @csrf
+            <div class=" mb-3">
+              <input id="email" name="email" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Usuario">
+            </div>
+            <div class=" mb-1">
+              <input id="password" name="password" type="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Contraseña">
+            </div>
+            @if(session('mensaje'))
+              <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
+                {{session('mensaje')}}
+              </p>
+            @endif
+            <div class="w-100 mb-3 py-4">
+              <button type="submit" class="w-full text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Aceptar</button>
+            </div>
+          </form>
+
         </div>
       </div>
     </div>
