@@ -2,6 +2,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme")
 const colors = require("tailwindcss/colors")
 export default {
+  important: true,
   mode: "jit", 
   content: [
     "./resources/**/*.blade.php",

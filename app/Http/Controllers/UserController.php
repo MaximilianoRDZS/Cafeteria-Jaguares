@@ -13,10 +13,10 @@ class UserController extends Controller
     {
         // Datos del nuevo usuario 
         $newUserData = [
-            'name' => 'uriel',
-            'apellido_paterno' => 'torres',
-            'apellido_materno' => 'de luna',
-            'email' => '2030342@upv.edu.mx',
+            'name' => 'demo',
+            'apellido_paterno' => 'demo',
+            'apellido_materno' => 'demo',
+            'email' => 'demo@demo.com',
             'password' => Hash::make('123456'), // Cambiar por la contraseña que desees
             'rol' => '1', // 1 para administrador, 0 para empleado
             'status' => '1', // 1 para usuario activo, 0 para usuario inactivo

@@ -5,6 +5,10 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\InventarioController;
+use App\Http\Controllers\ProveedoresController;
+use App\Http\Controllers\VentasController;
+use App\Http\Controllers\EmpleadosController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -44,18 +48,10 @@ Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard')
 
 
 
-Route::get('/empleados', function () {
-    return view('admin.empleados.empleados');
-});
+Route::get('/empleados', [EmpleadosController::class,'index'])->name('empleados');
 
-Route::get('/inventario', function () {
-    return view('admin.inventario.inventario');
-});
+Route::get('/inventario', [InventarioController::class,'index'])->name('inventario');
 
-Route::get('/ventas', function () {
-    return view('admin.ventas.ventas');
-});
+Route::get('/ventas', [VentasController::class,'index'])->name('ventas');
 
-Route::get('/proveedores', function () {
-    return view('admin.proveedores.proveedores');
-});
+Route::get('/proveedores', [ProveedoresController::class,'index'])->name('proveedores');

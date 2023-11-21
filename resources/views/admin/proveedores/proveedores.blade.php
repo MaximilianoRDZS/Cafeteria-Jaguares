@@ -8,87 +8,43 @@
   @vite('resources/css/app.css')
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="bg-gray-100">
-  <div class="bg-white flex p-6 shadow-sm">
-    <div class="mb-3 w-100 ">
-      <img src="{{asset('img/Jaguares.png')}}" class="w-20" alt="image">
-    </div>
-  </div>
-  <div class="flex h-screen">
-    <div class="p-6 border-r w-64 border-gray-200">
-      <h6 class="font-bold mb-4">Menu</h6>
-      <ul>
-        <li class="flex mb-8">
-          <div class="bg-white shadow-sm p-2 mr-3 rounded-lg">
-            <i class="fa-solid fa-house fa-lg"></i>
-          </div>
-          <a href="" class="self-center">Dashboard</a>
-        </li>
-        <li class="flex mb-8">
-          <div class="bg-white shadow-sm p-2 mr-3 rounded-lg">
-            <i class="fa-solid fa-boxes-stacked fa-lg"></i>          
-          </div>
-          <a href="" class="self-center">Inventario</a>
-        </li>
-        <li class="flex mb-8">
-          <div class="bg-white shadow-sm p-2 mr-3 rounded-lg">
-            <i class="fa-solid fa-circle-dollar-to-slot fa-lg"></i>
-          </div>
-          <a href="" class="self-center">Ventas</a>
-        </li>
-        <li class="flex mb-8">
-          <div class="bg-white shadow-sm p-2 mr-3 rounded-lg">
-            <i class="fa-solid fa-dolly"></i>
-          </div>
-          <a href="" class="self-center">Proveedores</a>
-        </li>
-        <li class="flex mb-8">
-          <div class="bg-white shadow-sm p-2 mr-3 rounded-lg">
-            <i class="fa-solid fa-user fa-lg"></i>
-          </div>
-          <a href="" class="self-center">Empleados</a>
-        </li>
-      </ul>
-    </div>
-    <!-- Contenido -->
-    <div class="container w-full">
-      <div class="flex flex-col">
-        <div class="overflow-x-auto">
-            <div class="inline-block min-w-full align-middle">
-                <div class="overflow-hidden shadow">
-                  <h1 class="font-bold">Proveedores</h1>
-                    <table class="min-w-full divide-y divide-gray-200 table-fixed dark:divide-gray-600">
-                        <thead class="bg-gray-100 dark:bg-gray-700">
+<body class="bg-gray-100 h-screen">
+  @include('shared.layout.layout')
+  <div class="p-4">
+    <div class="flex flex-col">
+      <div class="overflow-x-auto">
+          <div class="inline-block min-w-full align-middle">
+              <div class="overflow-hidden shadow">
+                <h1 class="font-bold text-lg my-4">PROVEEDORES</h1>
+                    <table class="w-full divide-y divide-gray-200 table-fixed ">
+                        <thead class="bg-white">
                             <tr>
-                                <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">
+                                <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
                                     Nombre
                                 </th>
-                                <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">
+                                <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
                                     Nombre de compañia
                                 </th>
-                                <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">
+                                <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
                                     Número teléfonico
                                 </th>
-                                <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">
+                                <th scope="col" class="p-4 text-xs font-medium text-center text-gray-500 uppercase">
                                     Acciones
                                 </th>
                             </tr>
                         </thead>
-                        <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
-                            <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <td class="flex items-center p-4 mr-12 space-x-6 whitespace-nowrap">
-                                    <div class="text-sm font-normal text-gray-500 dark:text-gray-400">
-                                        <div class="text-base font-semibold text-gray-900 dark:text-white"></div>
-                                        <div class="text-sm font-normal text-gray-500 dark:text-gray-400"></div>
-                                    </div>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr class="hover:bg-gray-200">
+                                <td class="p-4 text-base text-gray-900 whitespace-nowrap">
+                                    DEMO DEMO1
                                 </td>
-                                <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    
+                                <td class="p-4 text-base text-gray-900 whitespace-nowrap">
+                                    DEMO1
                                 </td>
-                                <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    
+                                <td class="p-4 text-base text-gray-900 whitespace-nowrap">
+                                    DEMO1
                                 </td>
-                                <td class="p-4 space-x-2 whitespace-nowrap flex items-center">
+                                <td class="p-4 space-x-2 whitespace-nowrap flex justify-center items-center">
                                     <form action="" method="GET">
                                         @csrf
                                         <button type="submit"class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800">
@@ -109,11 +65,9 @@
                             </tr>
                         </tbody>
                     </table>
-                </div>
-            </div>
-        </div>
-    </div>
-  </div>
+              </div>
+          </div>
+      </div>
   </div>
 </body>
 </html>
