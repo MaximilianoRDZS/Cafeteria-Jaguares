@@ -19,4 +19,10 @@ class ProveedoresController extends Controller
         }
         return view('auth.login');
     }
+
+        //Funcion para retornar la vista de agregar empleados
+        public function create(){
+            # Vista del formulario para añadir colaboradores
+            return view('admin.proveedores.create');
+        }
 }

@@ -16,6 +16,14 @@
           <div class="inline-block min-w-full align-middle">
               <div class="overflow-hidden shadow">
                 <h1 class="font-bold text-lg my-4">PROVEEDORES</h1>
+                <div class="flex w-100 justify-end mb-3">
+                    <a href="{{route('proveedores.create')}}">
+                        <button type="submit"class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-green-700 hover:bg-green-800">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                            Agregar
+                        </button>
+                    </a>
+                </div>
                     <table class="w-full divide-y divide-gray-200 table-fixed ">
                         <thead class="bg-white">
                             <tr>
@@ -23,10 +31,16 @@
                                     Nombre
                                 </th>
                                 <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
-                                    Nombre de compañia
+                                    Apellido
+                                </th>
+                                <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
+                                    Email
                                 </th>
                                 <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
                                     Número teléfonico
+                                </th>
+                                <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
+                                    Nombre de compañia
                                 </th>
                                 <th scope="col" class="p-4 text-xs font-medium text-center text-gray-500 uppercase">
                                     Acciones
@@ -37,6 +51,12 @@
                             <tr class="hover:bg-gray-200">
                                 <td class="p-4 text-base text-gray-900 whitespace-nowrap">
                                     DEMO DEMO1
+                                </td>
+                                <td class="p-4 text-base text-gray-900 whitespace-nowrap">
+                                    DEMO1
+                                </td>
+                                <td class="p-4 text-base text-gray-900 whitespace-nowrap">
+                                    DEMO1
                                 </td>
                                 <td class="p-4 text-base text-gray-900 whitespace-nowrap">
                                     DEMO1

@@ -7,8 +7,7 @@ use Illuminate\Http\Request;
 class EmpleadosController extends Controller
 {
     // Constructor para verificar autenticación
-    public function __construct()
-    {
+    public function __construct(){
         $this->middleware(['auth']);
     }
 
@@ -19,4 +18,11 @@ class EmpleadosController extends Controller
         }
         return view('auth.login');
     }
+
+    //Funcion para retornar la vista de agregar empleados
+    public function create(){
+        # Vista del formulario para añadir colaboradores
+        return view('admin.empleados.create');
+    }
+
 }

@@ -47,11 +47,31 @@ Route::post('/logout',[LogoutController::class,'store'])->name('logout');
 Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
 
 
-
+/*
+ *   Rutas para el empleados del administrador
+*/
+// Ruta para regresar la vista del empleados del administrador
 Route::get('/empleados', [EmpleadosController::class,'index'])->name('empleados');
+//Rutas para agregar un empleado
+Route::get('/empleados/create', [EmpleadosController::class, 'create'])->name('empleado.create');
 
+
+/*
+ *   Rutas para el inventario del administrador
+*/
+// Ruta para regresar la vista del inventario del administrador
 Route::get('/inventario', [InventarioController::class,'index'])->name('inventario');
 
+/*
+ *   Rutas para el ventas del administrador
+*/
+// Ruta para regresar la vista del ventas del administrador
 Route::get('/ventas', [VentasController::class,'index'])->name('ventas');
 
+/*
+ *   Rutas para el proveedores del administrador
+*/
+// Ruta para regresar la vista del proveedores del administrador
 Route::get('/proveedores', [ProveedoresController::class,'index'])->name('proveedores');
+//Rutas para agregar un empleado
+Route::get('/proveedores/create', [ProveedoresController::class, 'create'])->name('proveedores.create');
